@@ -8,7 +8,6 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-console.log('hello world');
 
 
 function sum(a, b) { //eslint-disable-line
@@ -17,7 +16,15 @@ function sum(a, b) { //eslint-disable-line
     return summary;
 }
 
-console.log(sum(4, 7));
+console.log('hello world');
+sum(4, 7);
+
+function sum(a, b) { //eslint-disable-line
+    var numSum = a + b;
+    var summary = ['Sum' + 'The sum of ' + a + ' and ' + b + ' is ' + numSum + '.'];
+    return summary;
+}
+
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
