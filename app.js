@@ -83,14 +83,15 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-    var sum = 0;
+    var total = 0;
 
-    for (var i = 0; i < testArray.length; i++){
-        sum = sum + testArray[i]
-        //console.log(sum);
+    for (var i = 0; i < sumArr.length; i++){
+        total = sum(total, sumArr[i]);
+        total = total[0];
+        console.log('total: ' + total); //this part is working
     }
 
-    var sumFunctionArray = [sum, sumArr + ' was passed in as an array of numbers, and ' + sum + ' is their sum.'];
+    var sumFunctionArray = [total, sumArr + ' was passed in as an array of numbers, and ' + total + ' is their sum.'];
     //console.log(sumFunctionArray);
     return sumFunctionArray;
 }
@@ -116,17 +117,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 
 function multiplyArray(multArr) { //eslint-disable-line
-    var product = 1;
+    var totalProduct = 1;
     for (var i = 0; i < multArr.length; i++){
-        product = product * multArr[i];
-        console.log(product);
+        totalProduct = multiply(totalProduct, multArr[i]);
+        totalProduct = totalProduct[0];
+        console.log(totalProduct);
     }
-    
-    var productArray = [product, 'The numbers ' + multArr + ' have a product of 24.'];
-    console.log(productArray);
+    console.log(totalProduct);
+    var productArray = [totalProduct, 'The numbers ' + multArr + ' have a product of 24.'];
     return productArray;
 }
-
 
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
